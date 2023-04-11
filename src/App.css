@@ -6,8 +6,17 @@ html {
   overflow-x:hidden;
 }
 
-.toolbar {
+.container {
+  display: block;
+  height: 100vh;
+  width: 800px;
+  margin: auto;
 
+  background: #fff;
+}
+
+.toolbar {
+margin: 20px;
 }
 
 button {
@@ -40,11 +49,17 @@ button:hover {
   text-transform: uppercase;
 }
 
-.container {
+.projects {
   display: flex;
-  height: 100vh;
-  width: 800px;
-  margin: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vmax;
+}
 
-  background: #fff;
+.project {
+  width: 30%;
+}
+
+img {
+  width: 100%;
 }

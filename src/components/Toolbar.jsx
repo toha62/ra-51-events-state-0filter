@@ -5,7 +5,7 @@ export default function Toolbar({ filters, selected, onSelectFilter }) {
         filters.map(filter => (
           <button 
             className={selected === filter ? 'button_pressed' : ''}
-            onClick={() => onSelectFilter()}
+            onClick={() => onSelectFilter(filter)}
           >
             {filter}
           </button>
