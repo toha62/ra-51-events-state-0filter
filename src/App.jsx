@@ -1,4 +1,4 @@
-import Toolbar from './components/Toolbar';
+import Portfolio from './components/Portfolio';
 
 function App() {
   const item = {
@@ -11,13 +11,7 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Toolbar
-        filters={["All", "Websites", "Flayers", "Business Cards"]}
-        selected="All"
-        onSelectFilter={(filter) => {console.log(filter);}}
-      />
-    </div>    
+    <Portfolio />   
   )
 }
 
