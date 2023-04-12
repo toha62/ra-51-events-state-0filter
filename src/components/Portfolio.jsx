@@ -8,7 +8,7 @@ export default class Portfolio extends React.Component {
     super(props);
     this.state = {selected: "All"};
     this.filters = ["All", "Websites", "Flayers", "Business Cards"];
-    // this.selected = this.filters[0];
+    console.log(this.state.selected);
     this.projects = [{
       img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/filter/img/mon.jpg",
       category: "Business Cards"
@@ -63,7 +63,7 @@ export default class Portfolio extends React.Component {
     }];
   }
 
-  render() {
+  render() {    
     return (
       <div className="container">
         <Toolbar
@@ -72,7 +72,8 @@ export default class Portfolio extends React.Component {
           onSelectFilter={(filter) => this.setState({selected: filter})}
         />
         <ProjectList
-          projects={this.projects}
+          projects={this.state.selected === 'All' ?
+            this.projects : this.projects.filter(item => item.category === this.state.selected)}
         />
       </div>
     );
